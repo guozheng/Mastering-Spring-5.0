@@ -31,7 +31,7 @@ public class BusinessServiceMockitoTest {
   @Test
   public void testCalculateSum() {
     BDDMockito.given(dataService.retrieveData(Matchers.any(User.class)))
-    .willReturn(Arrays.asList(new Data(10), new Data(15), new Data(25)));
+            .willReturn(Arrays.asList(new Data(10), new Data(15), new Data(25)));
 
     long sum = service.calculateSum(DUMMY_USER);
     assertEquals(10 + 15 + 25, sum);

@@ -21,10 +21,8 @@ public class LaunchJavaContext {
   public static Logger logger = Logger.getLogger(LaunchJavaContext.class);
 
   public static void main(String[] args) {
-    ApplicationContext context = new AnnotationConfigApplicationContext(
-        SpringContext.class);
-
+    ApplicationContext context = new AnnotationConfigApplicationContext(SpringContext.class);
     BusinessService service = context.getBean(BusinessService.class);
-    logger.debug(service.calculateSum(DUMMY_USER));
+    logger.debug("data sum for user: " + service.calculateSum(DUMMY_USER));
   }
 }
